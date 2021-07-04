@@ -1,0 +1,12 @@
+.card {
+  border: 1px solid black;
+  display: inline-block;
+  background-color: #c0c0c0;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.space {
+  padding: 10px;
+}
