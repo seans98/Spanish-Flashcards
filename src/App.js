@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Card from './components/Card/Card';
+import AppHeader from './components/AppHeader/AppHeader';
+import CardList from './components/CardList/CardList';
 
 const cardData = [
   {
@@ -15,24 +15,42 @@ const cardData = [
   {
       frontSide: 'rabbit*8',
       backSide: 'rabbyte'
-  }
+  },
+  {
+    frontSide: '9*8',
+    backSide: '72'
+},
+{
+    frontSide: '2**8',
+    backSide: '256'
+},
+{
+    frontSide: 'rabbit*8',
+    backSide: 'rabbyte'
+},
+  
 ];
 
-function App() {
-  const cardsTemplate = cardData.map( Card )
+class App extends Component {
+  API_URL = 'https://restcountries.eu/rest/v2/all'
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+  componentDidMount() {
+ 
+    // called when component mounts to the DOM
+    // data loading - API 
+    // Dont load data inside constructor load in componentdidmount
+    console.log('componenetdidMount')
+  }
 
-      </header>
-      {cardsTemplate}
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <AppHeader title="Flash Cards"/>
+        <CardList cardData={cardData}/>
+      </div>
+    );
+  }
+
 }
 
 export default App;

@@ -1,12 +1,32 @@
+:root {
+  --card-height: 50px;
+}
+
 .card {
   border: 1px solid black;
   display: inline-block;
-  background-color: #c0c0c0;
   margin: 10px;
-  padding: 10px;
+  padding: 0px;
   list-style-type: none;
+  width: 125px;
+  height: var(--card-height);
+  cursor: pointer;
+  user-select: none;
+}    
+
+.card__front, .card__back {
+  width: 100%;
+  line-height: var(--card-height);
 }
 
-.space {
-  padding: 10px;
+.card__front.hidden, .card__back.hidden {
+  display: none;
+}
+
+.card__front{
+  background-color: #ccffcc;
+}
+
+.card__back {
+  background-color: #ffffcc;
 }
