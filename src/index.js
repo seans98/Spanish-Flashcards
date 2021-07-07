@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App apiUrl="https://my-spanishvocab-api.herokuapp.com/words"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
