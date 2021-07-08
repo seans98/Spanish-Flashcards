@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 :root {
   --card-height: 100px;
   --card-line-height: 50px;
@@ -10,11 +12,32 @@
   padding: 0px;
   list-style-type: none;
   width: 175px;
-  font-size: 20px;
+  font: 25px 'Oswald', sans-serif;
   height: var(--card-height);
   cursor: pointer;
   user-select: none;
-}    
+  position: relative;
+}
+
+.card__delete {
+  text-decoration: none;
+  color: darkred;
+  font-weight: bold;
+  height: 25px;
+  width: 25px;
+  font-size: 17px;
+  line-height: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 4px;
+  padding: 1px;
+}
+.card__delete:hover {
+  box-shadow: 0 5-x 10px 0 rgba(25,25,25,0.5);
+  border: 1px solid darkred;
+  padding: 0;
+}
 
 .card__front, .card__back {
   width: 100%;
@@ -26,9 +49,13 @@
 }
 
 .card__front{
-  background-color: #ccffcc;
+  color: #BA1F53;
+  background: #DDD;
+  height: 100%;
 }
 
 .card__back {
-  background-color: #ffffcc;
+      color: white;
+      background-color: #C85073;
+
 }

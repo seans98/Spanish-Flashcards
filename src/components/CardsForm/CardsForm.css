@@ -1,7 +1,7 @@
 .form-container {
     width: 360px;
     margin: 20px auto;
-    border: 3px double green;
+    border: 3px double black;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -37,5 +37,12 @@
     line-height: 30px;
     padding: 10px 15px;
     cursor: pointer;
+    margin-left: 110px;
+    margin-top: 10px;
     
+}
+
+.form-header {
+    text-align: center;
+    margin-left: 75px;
 }

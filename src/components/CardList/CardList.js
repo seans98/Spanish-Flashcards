@@ -1,12 +1,12 @@
 // import React from 'react';
 import Card from '../Card/Card'
 import './CardList.css'
-import { v4 as uuidv4 } from 'uuid'
 
-function CardList({cardData}){
+
+function CardList({cardData, deleteItem}){
     return (
         <div className="card-list-swimlane">
-        {cardData.map( props => <Card key={uuidv4()} {...props} /> )}
+        {cardData.map( props => <Card key={props.id} deleteItem={deleteItem} {...props} /> )}
         </div>
         );
 }
