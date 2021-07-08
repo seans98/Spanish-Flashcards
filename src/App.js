@@ -13,11 +13,11 @@ function App(props) {
     if(cards.length === 0){
       fetch(props.apiUrl)
       .then(data => data.json())
-      .then( countries => {
-        function getNameandCapital(country) {
-          return { frontSide: country.eng, backSide: country.esp, id:uuidv4() };
+      .then( words => {
+        function getEngandEsp(word) {
+          return { frontSide: word.eng, backSide: word.esp, id:uuidv4() };
         }
-        const cards = countries.map( getNameandCapital );
+        const cards = words.map( getEngandEsp );
         setCards(cards);
       });
       
